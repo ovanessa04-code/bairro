@@ -11,4 +11,19 @@ class Bairro(Base):
         Identity(always=True),
         primary_key=True, 
     )
+    nome_bairro: Mapped[str] = mapped_column(
+        String(150),
+        nullable=False,
+    )
+    cidade: Mapped[str] = mapped_column(
+        String(100),
+        nullable=False,
+
+    )   
+    estado: Mapped[Optional[str]] = mapped_column(
+        String(2),
+        nullable=True,
+    )
+
+
     
