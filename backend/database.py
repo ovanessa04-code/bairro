@@ -19,7 +19,7 @@ url_banco = URL.create(
     port=int(os.getenv("DB_PORT","5432")),
     database=os.getenv("DB_NAME","mercearia"),
 )
-create_engine = create_engine(url_banco, pool_pre_ping=True)
+engine = create_engine(url_banco, pool_pre_ping=True)
 SessionLocal = sessionmaker(bind=engine, autoflush=False)
 
 class Base(DeclarativeBase):

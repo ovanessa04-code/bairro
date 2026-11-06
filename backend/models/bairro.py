@@ -3,7 +3,7 @@ from sqlalchemy.orm import Mapped, mapped_column
 from database import Base 
 
 class Bairro(Base):
-    __tablebairro__= "bairro"
+    __tablename__= "bairro"
     __table_args__={"schema": "public"}
 
     id_bairro: Mapped[int] = mapped_column(
@@ -20,7 +20,7 @@ class Bairro(Base):
         nullable=False,
 
     )   
-    estado: Mapped[Optional[str]] = mapped_column(
+    estado: Mapped[str] = mapped_column(
         String(2),
         nullable=True,
     )
