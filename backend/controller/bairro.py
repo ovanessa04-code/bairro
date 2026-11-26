@@ -13,13 +13,13 @@ class BairroEntrada(BaseModel):
     estado: str = Field(min_length=1, max_length=2)
 
 
-@field_validator("nome_bairro")
-@classmethod
-def validar_nome(cls, valor: str) -> str:
-    valor = valor.strip()
-    if not valor:
-        raise ValueError("O nome não pode ficar vazio.")
-    return valor
+    @field_validator("nome_bairro")
+    @classmethod
+    def validar_nome(cls, valor: str) -> str:
+        valor = valor.strip()
+        if not valor:
+            raise ValueError("O nome não pode ficar vazio.")
+        return valor
 
 class BairroSaida(BairroEntrada):
     model_config = ConfigDict(from_attributes=True)

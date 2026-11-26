@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API do Bairro - Categorias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>API do Bairro</h1>
+        <p>Gerenciamento de Categorias</p>
+    </header>
+
+    <main>
+        <section class="cadastro">
+            <h2>Cadastrar Categoria</h2>
+
+            <form id="formCategoria">
+                <input
+                    type="text"
+                    id="nome_categoria"
+                    placeholder="Digite o nome da categoria"
+                    required
+                >
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+
+        <section class="lista">
+            <h2>Lista de Categorias</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Categoria</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="listaCategorias"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

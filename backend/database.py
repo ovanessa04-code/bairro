@@ -17,7 +17,7 @@ url_banco = URL.create(
     password=senha,
     host=os.getenv("DB_HOST", "localhost"),
     port=int(os.getenv("DB_PORT","5432")),
-    database=os.getenv("DB_NAME","mercearia"),
+    database=os.getenv("DB_NAME","bairro"),
 )
 engine = create_engine(url_banco, pool_pre_ping=True)
 SessionLocal = sessionmaker(bind=engine, autoflush=False)
